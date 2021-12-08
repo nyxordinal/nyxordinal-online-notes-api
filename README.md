@@ -69,11 +69,11 @@ docker run -d -p {host-port}:8001 --name notes-be \
     nyxordinal/notes-be:{tag}
 ```
 
-4. Access notes-be in http://localhost:8001
+4. Access notes-be in http://localhost:{host-port}
 
 > **_NOTE:_** How to check your docker host IP, find out [in this link](https://nickjanetakis.com/blog/docker-tip-35-connect-to-a-database-running-on-your-docker-host)  
 > Or you can add `--net="host"` in `docker run` command and then for DB_HOST you can use `"localhost"`.  
-> If you use `--net="host"` in `docker run` command, `-p 8001:8001` must be removed from `docker run` command
+> If you use `--net="host"` in `docker run` command, `-p {host-port}:8001` must be removed from `docker run` command
 
 ## Developer Team
 
