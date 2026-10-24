@@ -6,12 +6,16 @@ Backend service of Nyxordinal Notes.
 
 ## Development Tools
 
--   [Lumen v8.0.1](https://lumen.laravel.com/)
+-   PHP 8.4.27
+-   [Lumen 11.2](https://lumen.laravel.com/)
+-   [Composer 2.2 or later](https://getcomposer.org/)
 -   [Faker](https://github.com/fzaninotto/Faker)
 
 ## Development
 
 A. Set Up
+
+Install PHP 8.4.27 and Composer 2.2 or later before setting up the project. Lumen 11 requires PHP 8.2 or later and Composer's runtime API 2.2.
 
 1. Clone this repo and change directory to project folder  
    `git clone https://github.com/nyxordinal/nyxordinal-online-notes.git && cd /nyxordinal-online-notes`
@@ -38,6 +42,8 @@ B. Run Dev Server
    `php artisan migrate`
 
 ## Docker
+
+The Docker image uses PHP 8.4.27 and disables PHP session upload progress as a defense-in-depth measure for the PHP2Shell session attack path. Rebuild and redeploy the image after pulling code updates to apply PHP or application changes.
 
 A. Publish Development Changes
 
